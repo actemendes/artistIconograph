@@ -640,7 +640,7 @@ header .hamburger-menu .menu__item:hover {
   padding-top: 30px;
 }
 .objects .swiper-slide .active-card h3 {
-  height: 40px;
+  height: auto;
   padding-top: 15px;
   text-align: center;
 }
@@ -1070,13 +1070,15 @@ header .hamburger-menu .menu__item:hover {
   }
   .objects .arrows {
     top: 0px;
-    height: 50px;
+    height: 0px;
     padding-bottom: 50px;
   }
   .objects .arrows .swiper-button-next {
+    display: none;
     right: 20px;
   }
   .objects .arrows .swiper-button-prev {
+    display: none;
     left: 20px;
   }
   .objects .swiper .active-card {

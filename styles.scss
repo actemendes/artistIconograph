@@ -464,7 +464,7 @@ header {
             }
 
             h3 {
-                height: 40px;
+                height: auto;
                 padding-top: 15px;
                 text-align: center;
             }
@@ -913,13 +913,16 @@ header {
             padding-bottom: 25px;
         }
         .arrows {
+            
             top: 0px;
-            height: 50px;
+            height: 0px; //50 if arrows ON
             padding-bottom: 50px;
             .swiper-button-next {
+                display: none;
                 right: 20px;
             }
             .swiper-button-prev {
+                display: none;
                 left: 20px;
             }
         }
@@ -932,6 +935,7 @@ header {
                     width: 35vw;
                     max-width: 300px;
                 }
+                
             }
         }
     }
