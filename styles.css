@@ -144,7 +144,7 @@ h1 {
   font-weight: 800;
   font-style: normal;
   letter-spacing: 24%;
-  color: black;
+  color: #464343;
   text-transform: uppercase;
 }
 
@@ -154,23 +154,24 @@ h2 {
   font-weight: 600;
   font-style: normal;
   letter-spacing: 11%;
-  color: black;
+  color: #464343;
   text-transform: uppercase;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 12px;
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
   font-style: normal;
   line-height: 174%;
   letter-spacing: 17%;
-  color: black;
+  color: #464343;
   text-transform: uppercase;
 }
 
 span,
-a, text {
+a,
+text {
   font-size: 24px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -190,6 +191,22 @@ header {
   background-color: #f2e9e4;
   padding-top: 45px;
   padding-bottom: 28px;
+}
+header .hamburger-menu .social {
+  padding: 0px 0px;
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  margin-left: 0px;
+}
+header .hamburger-menu .social span {
+  font-size: 20px;
+}
+header .hamburger-menu .social img {
+  opacity: 60%;
+  width: 30px;
 }
 header .hamburger-menu #menu__toggle {
   opacity: 0;
@@ -462,6 +479,7 @@ header .hamburger-menu .menu__item:hover {
           align-items: center;
 }
 .community .wrapper .window {
+  height: 450px;
   z-index: 10;
   position: absolute;
   top: 83px;
@@ -495,6 +513,137 @@ header .hamburger-menu .menu__item:hover {
   max-height: 747px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.objects {
+  height: auto;
+  background-color: #f2e9e4;
+  margin-top: 130px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  position: relative;
+}
+.objects h2 {
+  padding-bottom: 70px;
+  text-align: center;
+}
+.objects .swiper {
+  width: 100%;
+  height: 100%;
+}
+.objects .swiper-slide {
+  height: auto;
+  text-align: center;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.objects .swiper-slide .active-card {
+  height: 100%;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 25vw;
+  max-width: 200px; /* Ограничьте ширину контейнера для теста */
+}
+.objects .swiper-slide .active-card .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.objects .swiper-slide .active-card .heading span {
+  font-size: 17px;
+  margin-top: 15px;
+}
+.objects .swiper-slide .active-card img {
+  z-index: 10;
+  width: 25vw;
+  max-width: 200px;
+  height: 50vh;
+  max-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover; /* изображения внутри - покрывают */
+}
+.objects .swiper-slide .active-card h2,
+.objects .swiper-slide .active-card span {
+  width: 100%;
+  max-width: 437px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal; /* Позволяет переносить текст */
+  overflow: hidden; /* Скрывает переполнение */
+  text-overflow: ellipsis; /* Добавляет многоточие для переполненного текста */
+}
+.objects .swiper-slide .active-card h2 {
+  font-size: 18px;
+  padding-top: 30px;
+}
+.objects .swiper-slide .active-card h3 {
+  height: 40px;
+  padding-top: 15px;
+  text-align: center;
+}
+.objects .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.objects .swiper-button-next,
+.objects .swiper-button-prev {
+  color: rgb(192, 151, 151);
+}
+.objects .arrows {
+  top: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.objects .arrows .swiper-button-next {
+  position: absolute;
+  right: -40px;
+}
+.objects .arrows .swiper-button-prev {
+  position: absolute;
+  left: -40px;
+}
+.objects .swiper-horizontal > .swiper-pagination-bullets,
+.objects .swiper-pagination-bullets.swiper-pagination-horizontal,
+.objects .swiper-pagination-custom,
+.objects .swiper-pagination-fraction {
+  bottom: 40px;
+}
+.objects .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: white;
+}
+.objects .elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
 }
 
 /* *****  GALLERIES ***** */
@@ -761,6 +910,12 @@ header .hamburger-menu .menu__item:hover {
     max-width: 1200px;
     width: 100%;
   }
+  .objects .arrows .swiper-button-next {
+    right: -10px;
+  }
+  .objects .arrows .swiper-button-prev {
+    left: -10px;
+  }
   .gallery {
     /*  reseting the css for the class within the divs to show a different way to achieve grid control using the nth childs*/
   }
@@ -799,6 +954,7 @@ header .hamburger-menu .menu__item:hover {
     margin-top: 100px;
   }
   .community .wrapper {
+    height: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -868,6 +1024,29 @@ header .hamburger-menu .menu__item:hover {
   .about .image-cont {
     height: 70vh;
     width: auto;
+  }
+  .objects h2 {
+    padding-bottom: 25px;
+  }
+  .objects .arrows {
+    top: 0px;
+    height: 50px;
+    padding-bottom: 50px;
+  }
+  .objects .arrows .swiper-button-next {
+    right: 20px;
+  }
+  .objects .arrows .swiper-button-prev {
+    left: 20px;
+  }
+  .objects .swiper .active-card {
+    max-width: 300px;
+    width: 35vw;
+  }
+  .objects .swiper .active-card img {
+    height: 35vw;
+    width: 35vw;
+    max-width: 300px;
   }
 }
 @media screen and (max-width: 396px) {

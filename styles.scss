@@ -6,7 +6,7 @@ h1 {
     font-weight: 800;
     font-style: normal;
     letter-spacing: 24%;
-    color: black;
+    color: #464343;
     text-transform: uppercase;
 }
 
@@ -16,23 +16,24 @@ h2 {
     font-weight: 600;
     font-style: normal;
     letter-spacing: 11%;
-    color: black;
+    color: #464343;
     text-transform: uppercase;
 }
 
 h3 {
-    font-size: 24px;
+    font-size: 12px;
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
     font-style: normal;
     line-height: 174%;
     letter-spacing: 17%;
-    color: black;
+    color: #464343;
     text-transform: uppercase;
 }
 
 span,
-a, text {
+a,
+text {
     font-size: 24px;
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
@@ -54,6 +55,23 @@ header {
     padding-bottom: 28px;
 
     .hamburger-menu {
+        .social {
+            //border-radius: 30px;
+            padding: 0px 0px;
+            //border: 1px solid black;
+            margin-left: 20px;
+            display: flex;
+            gap: 10px;
+            margin-left: 0px;
+            span {
+                font-size: 20px;
+            }
+
+            img {
+                opacity: 60%;
+                width: 30px;
+            }
+        }
         #menu__toggle {
             opacity: 0;
         }
@@ -271,6 +289,7 @@ header {
         justify-content: center;
         align-items: center;
         .window {
+            height: 450px;
             z-index: 10;
             position: absolute;
             top: 83px;
@@ -307,6 +326,128 @@ header {
         //     max-height: 790px;
         //     object-fit: cover;
         // }
+    }
+}
+
+.objects {
+    height: auto;
+    background-color: #f2e9e4;
+    margin-top: 130px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    position: relative;
+
+    h2 {
+        padding-bottom: 70px;
+        text-align: center;
+    }
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        height: auto;
+        text-align: center;
+        font-size: 18px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .active-card {
+            height: 100%;
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            width: 25vw;
+            max-width: 200px; /* Ограничьте ширину контейнера для теста */
+
+            .heading {
+                display: flex;
+                flex-direction: column;
+                //gap: 15px;
+                span {
+                    font-size: 17px;
+                    margin-top: 15px;
+                }
+            }
+            img {
+                z-index: 10;
+                width: 25vw;
+                max-width: 200px;
+                height: 50vh;
+                max-height: 200px;
+                object-fit: cover; /* изображения внутри - покрывают */
+            }
+
+            h2,
+            span {
+                width: 100%;
+                max-width: 437px;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                white-space: normal; /* Позволяет переносить текст */
+                overflow: hidden; /* Скрывает переполнение */
+                text-overflow: ellipsis; /* Добавляет многоточие для переполненного текста */
+            }
+            h2 {
+                font-size: 18px;
+                padding-top: 30px;
+            }
+
+            h3 {
+                height: 40px;
+                padding-top: 15px;
+                text-align: center;
+            }
+        }
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: rgb(192, 151, 151);
+    }
+
+    .arrows {
+        top: 200px;
+        display: flex;
+        position: relative;
+        .swiper-button-next {
+            position: absolute;
+            right: -40px;
+        }
+
+        .swiper-button-prev {
+            position: absolute;
+            left: -40px;
+        }
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: 40px;
+    }
+    .swiper-pagination {
+        .swiper-pagination-bullet-active {
+            background-color: white;
+        }
+    }
+
+    .elements {
+        display: flex;
+
+        margin-top: 50px;
     }
 }
 
@@ -574,6 +715,17 @@ header {
         }
     }
 
+    .objects {
+        .arrows {
+            .swiper-button-next {
+                right: -10px;
+            }
+            .swiper-button-prev {
+                left: -10px;
+            }
+        }
+    }
+
     .gallery {
         h2 {
             padding-bottom: 50px;
@@ -615,6 +767,7 @@ header {
     .community {
         margin-top: 100px;
         .wrapper {
+            height: auto;
             flex-direction: column-reverse;
             .window {
                 padding: 27px !important;
@@ -686,6 +839,34 @@ header {
         .image-cont {
             height: 70vh;
             width: auto;
+        }
+    }
+
+    .objects {
+        h2 {
+            padding-bottom: 25px;
+        }
+        .arrows {
+            top: 0px;
+            height: 50px;
+            padding-bottom: 50px;
+            .swiper-button-next {
+                right: 20px;
+            }
+            .swiper-button-prev {
+                left: 20px;
+            }
+        }
+        .swiper {
+            .active-card {
+                max-width: 300px;
+                width: 35vw;
+                img {
+                    height: 35vw;
+                    width: 35vw;
+                    max-width: 300px;
+                }
+            }
         }
     }
 }
