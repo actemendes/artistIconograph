@@ -648,7 +648,7 @@ header .hamburger-menu .menu__item:hover {
 
 /* *****  GALLERIES ***** */
 .gallery {
-  padding-top: 150px;
+  padding-top: 100px;
   /* Another way to do the same without declaring in the classes - remove h-x w-x from classes */
   /* .gallery-wrapper {
       padding: 2rem 10rem;
