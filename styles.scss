@@ -235,10 +235,18 @@ header {
     margin-top: 20px;
     padding: 10px 75px;
     background-color: #464343;
+    border: none;
     color: white;
     h1 {
         color: white;
         padding: 12px;
+    }
+}
+.chat:hover{
+    animation: fadeIn ease 1s;
+    background-color: rgba(221, 187, 187, 0.9);
+    h1{
+        color: #333;
     }
 }
 
